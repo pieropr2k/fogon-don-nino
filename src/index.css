@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  body {
+    @apply bg-crema font-body text-base text-carbon antialiased;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-bold;
+  }
+  /* Foco visible en todo lo interactivo */
+  :focus-visible {
+    outline: 3px solid #f2a03d;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  /* Botón base: mínimo 44 px de alto para el dedo */
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-chip font-semibold uppercase tracking-wide transition-colors;
+  }
+  .btn-wa {
+    @apply btn bg-whatsapp text-carbon hover:bg-[#1fb957];
+  }
+  .btn-brasa {
+    @apply btn bg-brasa text-crema hover:bg-fuego hover:text-carbon;
+  }
+  .btn-outline {
+    @apply btn border-2 border-crema/70 text-crema hover:bg-crema hover:text-carbon;
+  }
+
+  /* Veta de madera: separador sutil con líneas finas */
+  .veta {
+    height: 10px;
+    background-color: #6b4226;
+    background-image:
+      repeating-linear-gradient(90deg, transparent 0 18px, rgba(168, 116, 68, 0.35) 18px 19px, transparent 19px 47px),
+      repeating-linear-gradient(0deg, rgba(20, 16, 13, 0.25) 0 1px, transparent 1px 4px);
+  }
+
+  /* Fondo de madera cálida: tablones con veta fina, para secciones "de fogón" */
+  .fondo-madera {
+    background-color: #5a3720;
+    background-image:
+      linear-gradient(180deg, rgba(232, 115, 26, 0.1), transparent 55%),
+      repeating-linear-gradient(90deg, rgba(20, 16, 13, 0.28) 0 2px, transparent 2px 120px),
+      repeating-linear-gradient(0deg, rgba(168, 116, 68, 0.08) 0 1px, transparent 1px 7px);
+  }
+
+  /* Ocultar scrollbar en carruseles manteniendo el scroll nativo */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

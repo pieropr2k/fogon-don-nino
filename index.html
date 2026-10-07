@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#14100D" />
+
+    <title>El Fogón de Don Nino · Parrilla de barrio · Carta, reservas y delivery</title>
+    <meta
+      name="description"
+      content="Parrilla de barrio con 40 años a la brasa. Mirá la carta, reservá por WhatsApp para salón, cumpleaños y grupos, o pedí para llevar. Martes a domingo."
+    />
+
+    <!-- Open Graph / Twitter (cómo se ve al compartir por WhatsApp o Instagram) -->
+    <!-- PENDIENTE: al publicar, cambiar las URLs por el dominio real y subir una imagen 1200x630 real -->
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="El Fogón de Don Nino" />
+    <meta property="og:title" content="El Fogón de Don Nino · Parrilla de barrio" />
+    <meta
+      property="og:description"
+      content="40 años a la brasa. Mirá la carta y reservá por WhatsApp. Martes a domingo, mediodía y noche."
+    />
+    <meta property="og:image" content="https://example.com/img/hero-brasas.svg" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="El Fogón de Don Nino · Parrilla de barrio" />
+    <meta
+      name="twitter:description"
+      content="40 años a la brasa. Mirá la carta y reservá por WhatsApp."
+    />
+    <meta name="twitter:image" content="https://example.com/img/hero-brasas.svg" />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Oswald:wght@200..700&family=Rokkitt:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      JSON-LD Restaurant (estático). ACTUALIZAR cuando haya datos reales:
+      telephone, address (calle, ciudad, provincia), url, image, sameAs (Instagram real).
+      Los valores marcados PLACEHOLDER vienen de src/data/config.js (mantenerlos iguales).
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "El Fogón de Don Nino",
+        "description": "Parrilla de barrio con 40 años a la brasa. Salón, take away y delivery.",
+        "url": "https://example.com/",
+        "image": "https://example.com/img/hero-brasas.svg",
+        "telephone": "+54 00 0000-0000",
+        "servesCuisine": ["Parrilla", "Asado argentino"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Principal 0000",
+          "addressLocality": "Barrio",
+          "addressCountry": "AR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "description": "Mediodía y noche. Lunes cerrado."
+          }
+        ],
+        "acceptsReservations": "True",
+        "hasMenu": "https://example.com/#carta",
+        "sameAs": ["https://instagram.com/"]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -58,7 +58,7 @@ export default function Menu() {
               {cat.title}
             </h3>
             {/* Móvil: carrusel con scroll nativo. md: 3 columnas. lg: 4 columnas. */}
-            <ul className="no-scrollbar -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-3 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 lg:grid-cols-4">
+            <ul className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:overflow-visible lg:grid-cols-4">
               {cat.items.map((item) => (
                 <li key={item.name} className="w-[72%] shrink-0 snap-start sm:w-[45%] md:w-auto">
                   <DishCard item={item} />

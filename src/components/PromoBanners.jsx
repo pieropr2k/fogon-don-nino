@@ -1,4 +1,5 @@
-import { Cake, CakeSlice, ArrowRight } from "lucide-react";
+import { CakeSlice, ArrowRight } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { waLink, WA_MSG } from "../lib/whatsapp";
 
 // Dos banners de 2 columnas (apilados en móvil). Sin descuentos ni "ofertas".
@@ -12,8 +13,8 @@ export default function PromoBanners() {
         >
           <CakeSlice className="h-12 w-12 shrink-0 text-ascua" aria-hidden="true" />
           <div>
-            <h3 className="font-display text-2xl font-extrabold">El flan casero, orgullo de la casa</h3>
-            <p className="mt-1 inline-flex items-center gap-1 font-bold text-ascua">
+            <p className="font-display text-2xl font-extrabold">El flan casero, el orgullo de la casa</p>
+            <p className="mt-1 inline-flex items-center gap-1 font-bold text-ascua underline underline-offset-4">
               Ver postres
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </p>
@@ -24,12 +25,12 @@ export default function PromoBanners() {
           href={waLink(WA_MSG.cumple)}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center gap-4 rounded-xl bg-brasa p-6 text-crema shadow-calido"
+          className="group flex items-center gap-4 rounded-xl bg-whatsapp p-6 text-carbon shadow-calido"
         >
-          <Cake className="h-12 w-12 shrink-0 text-ascua" aria-hidden="true" />
+          <FaWhatsapp className="h-12 w-12 shrink-0" aria-hidden="true" />
           <div>
-            <h3 className="font-display text-2xl font-extrabold">Reservá tu cumpleaños</h3>
-            <p className="mt-1 inline-flex items-center gap-1 font-bold text-crema underline underline-offset-4">
+            <p className="font-display text-2xl font-extrabold">Reservá tu cumpleaños</p>
+            <p className="mt-1 inline-flex items-center gap-1 font-bold underline underline-offset-4">
               Escribinos por WhatsApp
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </p>

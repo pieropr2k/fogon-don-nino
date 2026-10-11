@@ -5,10 +5,10 @@ import SectionTitle from "./SectionTitle";
 
 export default function HoursAndLocation() {
   return (
-    <section id="donde-estamos" aria-labelledby="titulo-donde" className="scroll-mt-[116px] fondo-madera py-12 text-crema">
+    <section id="donde-estamos" aria-labelledby="titulo-donde" className="scroll-mt-[116px] fondo-madera py-12 text-crema md:py-20">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-2 md:items-center">
         <div>
-          <SectionTitle id="titulo-donde" dark>Horarios y ubicación</SectionTitle>
+          <SectionTitle id="titulo-donde" dark>Dónde y cuándo</SectionTitle>
           <ul className="mt-6 space-y-4">
             <li className="flex items-start gap-3">
               <Clock className="mt-0.5 h-6 w-6 shrink-0 text-ascua" aria-hidden="true" />
@@ -20,7 +20,7 @@ export default function HoursAndLocation() {
             </li>
           </ul>
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href={mapsLink()} target="_blank" rel="noopener noreferrer" className="btn bg-ascua font-body font-bold normal-case tracking-normal text-carbon hover:bg-fuego">
+            <a href={mapsLink()} target="_blank" rel="noopener noreferrer" className="btn bg-ascua text-carbon hover:bg-fuego">
               <Navigation className="h-5 w-5" aria-hidden="true" />
               Cómo llegar
             </a>
@@ -32,7 +32,7 @@ export default function HoursAndLocation() {
               Lo que sale de la parrilla hoy, lo ves en Instagram.
             </p>
             <p className="mt-1 text-crema/95">
-              Cada día subimos el plato del día. Si todavía no nos seguís, te estás perdiendo lo mejor.
+              Subimos los platos del día. ¡Seguinos!
             </p>
             <a
               href={CONFIG.instagram}
@@ -41,7 +41,7 @@ export default function HoursAndLocation() {
               className="btn mt-4 w-full bg-crema text-carbon hover:bg-ascua sm:w-auto"
             >
               <Instagram className="h-5 w-5" aria-hidden="true" />
-              Seguinos y no te lo pierdas
+              Seguinos en Instagram
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
           </div>

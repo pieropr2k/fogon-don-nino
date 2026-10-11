@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { MessageCircle, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { MENU } from "../data/menu";
 import { CONFIG } from "../data/config";
 import { waLink, WA_MSG } from "../lib/whatsapp";
@@ -38,7 +39,7 @@ export default function Menu() {
               : "Precios actualizados todos los días. Consultalos por WhatsApp o en el local."}
           </p>
           <a href={waLink(WA_MSG.precios)} target="_blank" rel="noopener noreferrer" className="btn-wa shrink-0">
-            <MessageCircle className="h-5 w-5" aria-hidden="true" />
+            <FaWhatsapp className="h-5 w-5" aria-hidden="true" />
             {CONFIG.SHOW_PRICES ? "Consultar por WhatsApp" : "Consultar precios"}
           </a>
         </div>

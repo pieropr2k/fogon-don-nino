@@ -22,7 +22,7 @@ export default function Story() {
               se apagó.
             </p>
             <p>
-              Hoy la parrilla sigue en familia: Ricardo, su hijo, y Facu, su nieto, cuidan la receta y el trato de
+              Hoy la parrilla sigue en familia: Ricardo, hijo de Don Nino, y Facu, su nieto, cuidan la receta y el trato de
               siempre. Fierro, madera y brasa: así se cocina acá.
             </p>
           </div>

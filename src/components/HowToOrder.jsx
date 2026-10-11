@@ -1,4 +1,5 @@
-import { Utensils, ShoppingBag, Bike, MessageCircle } from "lucide-react";
+import { Utensils, ShoppingBag, Bike } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { CONFIG } from "../data/config";
 import { waLink, WA_MSG } from "../lib/whatsapp";
 import SectionTitle from "./SectionTitle";
@@ -24,34 +25,25 @@ export default function HowToOrder() {
           Cómo pedir
         </SectionTitle>
         <ul className="mt-6 grid gap-4 md:grid-cols-3">
-          <OrderCard icon={Utensils} title="Salón" text="Veníte a comer al salón. Los findes, reservá.">
+          <OrderCard icon={Utensils} title="Salón" text="Venite a comer al salón. Los findes, reservá.">
             <a href={waLink(WA_MSG.reservar)} target="_blank" rel="noopener noreferrer" className="btn-brasa">
               Reservar
             </a>
           </OrderCard>
 
-          <OrderCard icon={ShoppingBag} title="Take Away" text="Pedí por WhatsApp, retirá y listo.">
+          <OrderCard icon={ShoppingBag} title="Para llevar" text="Pedí por WhatsApp, retirá y listo.">
             <a href={waLink(WA_MSG.takeaway)} target="_blank" rel="noopener noreferrer" className="btn-wa">
-              <MessageCircle className="h-5 w-5" aria-hidden="true" />
+              <FaWhatsapp className="h-5 w-5" aria-hidden="true" />
               Pedir por WhatsApp
             </a>
           </OrderCard>
 
-          <OrderCard icon={Bike} title="Delivery" text="Pedinos por app.">
+          <OrderCard icon={Bike} title="Delivery" text={hasDelivery ? "Pedinos por app." : "Estamos sumando el delivery por app."}>
             {hasDelivery ? (
               <a href={CONFIG.deliveryUrl} target="_blank" rel="noopener noreferrer" className="btn-brasa">
                 Pedir por la app
               </a>
-            ) : (
-              // PENDIENTE: app de delivery sin confirmar. Se activa solo al completar CONFIG.deliveryUrl
-              <button
-                type="button"
-                disabled
-                className="btn cursor-not-allowed border-2 border-maderaclaro text-crema/80"
-              >
-                Próximamente
-              </button>
-            )}
+            ) : null}
           </OrderCard>
         </ul>
       </div>

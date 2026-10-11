@@ -1,4 +1,5 @@
-import { Instagram, MessageCircle, MapPin, Clock } from "lucide-react";
+import { Instagram, MapPin, Clock } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { CONFIG } from "../data/config";
 import { waLink, WA_MSG } from "../lib/whatsapp";
 import Flame from "./Flame";
@@ -24,8 +25,8 @@ export default function Footer() {
           <ul className="mt-2">
             <li>
               <a href={waLink(WA_MSG.general)} target="_blank" rel="noopener noreferrer" className={link}>
-                <MessageCircle className="h-5 w-5 text-ascua" aria-hidden="true" />
-                WhatsApp
+                <FaWhatsapp className="h-5 w-5 text-whatsapp" aria-hidden="true" />
+                <span className="text-whatsapp">WhatsApp</span>
               </a>
             </li>
             <li>
@@ -52,8 +53,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-humo px-4 py-4 text-center text-sm text-crema/80">
-        <p>Precios actualizados por WhatsApp o en el local.</p>
+      <div className="border-t border-humo px-4 py-4 text-center text-base text-crema/80">
+        <p>Consultá los precios por WhatsApp o en el local.</p>
         <p className="mt-1">
           © {new Date().getFullYear()} {CONFIG.name}. Todos los derechos reservados.
         </p>

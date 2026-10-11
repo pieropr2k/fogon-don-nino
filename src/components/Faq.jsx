@@ -8,14 +8,14 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section id="faq" aria-labelledby="titulo-faq" className="scroll-mt-[116px] fondo-madera py-12 text-crema">
+    <section id="faq" aria-labelledby="titulo-faq" className="scroll-mt-[116px] bg-crema py-12 text-carbon md:py-20">
       <div className="mx-auto max-w-3xl px-4">
-        <SectionTitle id="titulo-faq" dark>Preguntas frecuentes</SectionTitle>
+        <SectionTitle id="titulo-faq">Preguntas frecuentes</SectionTitle>
         <div className="mt-6 space-y-3">
           {FAQ.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div key={item.q} className="overflow-hidden rounded-xl bg-carbon/55 ring-1 ring-maderaclaro/40">
+              <div key={item.q} className="overflow-hidden rounded-xl bg-humo text-crema ring-1 ring-madera">
                 <h3 className="font-body">
                   <button
                     type="button"

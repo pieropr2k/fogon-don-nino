@@ -12,6 +12,9 @@ export default {
         maderaclaro: "#A87444",
         crema: "#F6EBDD",
         whatsapp: "#25D366",
+        whatsapposcuro: "#1FB957",
+        brasaoscuro: "#9A2A1A",
+        maderaoscura: "#5A3720",
       },
       fontFamily: {
         display: ["Rokkitt", "Georgia", "serif"],

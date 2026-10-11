@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Menu as MenuIcon, X, MessageCircle } from "lucide-react";
+import { Menu as MenuIcon, X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { waLink, WA_MSG } from "../lib/whatsapp";
 import Flame from "./Flame";
 
@@ -27,8 +28,9 @@ export default function Header() {
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between gap-2 px-4">
         <a href="#inicio" className="flex items-center gap-1.5" aria-label="El Fogón de Don Nino, ir al inicio">
           <Flame className="h-7 w-7" />
-          <span className="font-display text-lg font-extrabold leading-none sm:text-2xl">
-            El Fogón de Don Nino
+          <span className="font-display text-xl font-extrabold leading-none sm:text-2xl">
+            <span className="sm:hidden">Don Nino</span>
+            <span className="hidden sm:inline">El Fogón de Don Nino</span>
           </span>
         </a>
 
@@ -47,7 +49,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="btn-wa !px-3 text-sm sm:text-base"
           >
-            <MessageCircle className="h-4 w-4" aria-hidden="true" />
+            <FaWhatsapp className="h-4 w-4" aria-hidden="true" />
             Reservar
           </a>
           <button

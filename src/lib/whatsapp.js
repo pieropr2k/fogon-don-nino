@@ -8,11 +8,11 @@ export function waLink(mensaje = "") {
 
 // Mensajes prellenados (editables acá).
 export const WA_MSG = {
-  reservar: "Hola! Quiero reservar para __ personas el día __ a las __.",
-  precios: "Hola! Quisiera consultar los precios de la carta.",
-  takeaway: "Hola! Quiero hacer un pedido para llevar.",
-  cumple: "Hola! Quiero reservar un cumpleaños en El Fogón de Don Nino.",
-  general: "Hola! Quisiera hacer una consulta.",
+  reservar: "¡Hola! Quiero reservar para __ personas el día __ a las __.",
+  precios: "¡Hola! Quiero consultar los precios de la carta.",
+  takeaway: "¡Hola! Quiero hacer un pedido para llevar.",
+  cumple: "¡Hola! Quiero reservar un cumpleaños en El Fogón de Don Nino.",
+  general: "¡Hola! Quiero hacer una consulta.",
 };
 
 // Link a Google Maps (abrir y embeber) a partir de la dirección de config.

@@ -8,7 +8,7 @@ export default function DishCard({ item }) {
 
   return (
     <article
-      className={`flex h-full flex-col overflow-hidden rounded-xl bg-white/60 shadow-calido ring-1 ${
+      className={`flex h-full flex-col overflow-hidden rounded-xl bg-crema shadow-calido ring-1 ${
         item.featured ? "ring-2 ring-ascua" : "ring-madera/20"
       }`}
     >
